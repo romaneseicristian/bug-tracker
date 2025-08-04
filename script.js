@@ -36,23 +36,29 @@ bugForm.addEventListener('submit', function(e) {
 
 function displayBugs() {
   bugList.innerHTML = '';
-  bugs.forEach(bug => {
+  bugs.forEach((bug, index) => {
     const li = document.createElement('li');
-    li.classList.add('bug-entry'); // optional for styling the whole entry
+    li.classList.add('bug-entry'); // optional for styling
+
+    // Create the bug number manually using the index
+    const bugNumber = index + 1;
 
     li.innerHTML += `
-    <div class="bug-card">
-      <strong class="truncate-text custom-bug-list">${bug.title}</strong><br>
-      Severity: <span class="${getSeverityClass(bug.severity)}">${bug.severity}</span> | Priority: <span class="${getPriorityClass(bug.priority)}">${bug.priority}</span> | Environment: ${bug.environment}<br>
-      <span class="truncate-text">Label: ${bug.label}</span><br>
-      <span class="truncate-text">Description: ${bug.description}</span><br>
-      Attachment: ${bug.attachmentName}<br>
-      Status: ${bug.status}
-    </div>
+      <div class="bug-card">
+        <strong class="truncate-text bug-title">Bug #${bugNumber}: ${bug.title}</strong><br>
+        Severity: <span class="${getSeverityClass(bug.severity)}">${bug.severity}</span> | 
+        Priority: <span class="${getPriorityClass(bug.priority)}">${bug.priority}</span> | 
+        Environment: ${bug.environment}<br>
+        <span class="truncate-text">Label: ${bug.label}</span><br>
+        <span class="truncate-text">Description: ${bug.description}</span><br>
+        Attachment: ${bug.attachmentName}<br>
+        Status: ${bug.status}
+      </div>
     `;
     bugList.appendChild(li);
   });
 }
+
 
 function getSeverityClass(severity) {
   switch (severity.toLowerCase()) {
