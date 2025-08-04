@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <div class="header-container">
   <meta charset="UTF-8">
   <title>Bug Tracker</title>
   <link rel="stylesheet" href="style.css">
-  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="form-container">
-  <h1>Bug Submission</h1>
-  <form id="bugForm" enctype="multipart/form-data">
-    <label for="title">Bug Title</label>
-    <input type="text" id="title" required>
+    <h1>Bug Submission</h1>
+    <form id="bugForm" enctype="multipart/form-data">
+      
+      <label for="title"><i class="fas fa-bug"></i> Bug Title</label>
+      <input type="text" id="title" required>
 
-    <label for="severity">Severity</label>
-    <select id="severity">
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-      <option value="Critical">Critical</option>
-    </select>
+      <label for="severity"><i class="fas fa-exclamation-circle"></i> Severity</label>
+      <select id="severity">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Critical">Critical</option>
+      </select>
 
-    <label for="priority">Priority</label>
-    <select id="priority">
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-      <option value="Urgent">Urgent</option>
-    </select>
+      <label for="priority"><i class="fas fa-flag"></i> Priority</label>
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Urgent">Urgent</option>
+      </select>
 
-    <label for="environment">Detected On</label>
-    <select id="environment">
-      <option value="Web">Web</option>
-      <option value="iOS">iOS</option>
-      <option value="Android">Android</option>
-    </select>
+      <label for="environment"><i class="fas fa-desktop"></i> Detected On</label>
+      <select id="environment">
+        <option value="Web">Web</option>
+        <option value="iOS">iOS</option>
+        <option value="Android">Android</option>
+      </select>
 
-    <label for="description">Description</label>
-    <textarea id="description" rows="4" required></textarea>
+      <label for="description"><i class="fas fa-align-left"></i> Description</label>
+      <textarea id="description" rows="4" required></textarea>
 
-    <label for="attachment">Attachment</label>
-    <input type="file" id="attachment" accept="image/*">
+      <label for="attachment"><i class="fas fa-paperclip"></i> Attachment</label>
+      <input type="file" id="attachment" accept="image/*">
 
-    <label for="label">Label</label>
-    <input type="text" id="label">
+      <label for="label"><i class="fas fa-tag"></i> Label</label>
+      <input type="text" id="label">
 
-    <button type="submit">Submit Bug</button>
-  </form>
+      <button type="submit">Submit Bug</button>
+    </form>
   </div>
-   <div class="bugs-container">
-  <h2>Submitted Bugs</h2>
-  <ul id="bugList"></ul>
 
-  <script src="script.js"></script>
+  <div class="bugs-container">
+    <h2>Submitted Bugs</h2>
+    <ul id="bugList"></ul>
+    <script src="script.js"></script>
   </div>
-<!--   Deploy is on queue due to a known bug. Adding this comment to redeploy -->
 </body>
 </html>
