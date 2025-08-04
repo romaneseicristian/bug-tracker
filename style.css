@@ -70,3 +70,11 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+.truncate-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
