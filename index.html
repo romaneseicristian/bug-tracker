@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="header-container">
   <meta charset="UTF-8">
   <title>Bug Tracker</title>
   <link rel="stylesheet" href="style.css">
+  </div>
 </head>
 <body>
+  <div class="form-container">
   <h1>Bug Submission</h1>
-  <br>
   <form id="bugForm" enctype="multipart/form-data">
     <label for="title">Bug Title</label>
     <input type="text" id="title" required>
@@ -46,10 +48,12 @@
 
     <button type="submit">Submit Bug</button>
   </form>
-<br>
+  </div>
+  <div class="bugs-container">
   <h2>Submitted Bugs</h2>
   <ul id="bugList"></ul>
 
   <script src="script.js"></script>
+  </div>
 </body>
 </html>
