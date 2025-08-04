@@ -78,3 +78,32 @@ button:hover {
   overflow: hidden;
 }
 
+.severity-low {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.severity-medium {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+.severity-high {
+  color: darkred;
+  font-weight: bold;
+}
+
+.priority-low {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.priority-medium {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+.priority-high {
+  color: darkred;
+  font-weight: bold;
+}
