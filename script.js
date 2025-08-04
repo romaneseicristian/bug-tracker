@@ -40,14 +40,15 @@ function displayBugs() {
     const li = document.createElement('li');
     li.classList.add('bug-entry'); // optional for styling the whole entry
 
-    li.innerHTML = `
+    li.innerHTML += `
+    <div class="bug-card">
       <strong class="truncate-text">${bug.title}</strong><br>
       <span class="${getSeverityClass(bug.severity)}">Severity: ${bug.severity}</span> | <span class="${getPriorityClass(bug.priority)}">Priority: ${bug.priority}</span> | Environment: ${bug.environment}<br>
       <span class="truncate-text">Label: ${bug.label}</span><br>
       <span class="truncate-text">Description: ${bug.description}</span><br>
       Attachment: ${bug.attachmentName}<br>
       Status: ${bug.status}
-      <hr class="bug-devider">
+    </div>
     `;
     bugList.appendChild(li);
   });
