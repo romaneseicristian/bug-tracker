@@ -61,6 +61,9 @@ input, textarea, select {
 .header-container,
 .form-container,
 .bugs-container {
-  margin-bottom: 20px; /* adds spacing between sections */
+  margin-bottom: 20px;
+  display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 600px;
 }
