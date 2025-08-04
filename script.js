@@ -42,7 +42,7 @@ function displayBugs() {
 
     li.innerHTML = `
       <strong class="truncate-text">${bug.title}</strong><br>
-      Severity: ${bug.severity} | Priority: ${bug.priority} | Environment: ${bug.environment}<br>
+      <span class="${getSeverityClass(bug.severity)}">Severity: ${bug.severity}</span> | <span class="${getPriorityClass(bug.priority)}">Priority: ${bug.priority}</span> | Environment: ${bug.environment}<br>
       <span class="truncate-text">Label: ${bug.label}</span><br>
       <span class="truncate-text">Description: ${bug.description}</span><br>
       Attachment: ${bug.attachmentName}<br>
@@ -50,4 +50,24 @@ function displayBugs() {
     `;
     bugList.appendChild(li);
   });
+}
+
+function getSeverityClass(severity) {
+  switch (severity.toLowerCase()) {
+    case 'low': return 'severity-low';
+    case 'medium': return 'severity-medium';
+    case 'high':
+    case 'critical': return 'severity-high';
+    default: return '';
+  }
+}
+
+function getPriorityClass(priority) {
+  switch (priority.toLowerCase()) {
+    case 'low': return 'priority-low';
+    case 'medium': return 'priority-medium';
+    case 'high':
+    case 'urgent': return 'priority-high';
+    default: return '';
+  }
 }
