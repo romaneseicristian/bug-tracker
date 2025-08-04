@@ -38,11 +38,13 @@ function displayBugs() {
   bugList.innerHTML = '';
   bugs.forEach(bug => {
     const li = document.createElement('li');
+    li.classList.add('bug-entry'); // optional for styling the whole entry
+
     li.innerHTML = `
-      <strong>${bug.title}</strong><br>
+      <strong class="truncate-text">${bug.title}</strong><br>
       Severity: ${bug.severity} | Priority: ${bug.priority} | Environment: ${bug.environment}<br>
-      Label: ${bug.label}<br>
-      Description: ${bug.description}<br>
+      <span class="truncate-text">Label: ${bug.label}</span><br>
+      <span class="truncate-text">Description: ${bug.description}</span><br>
       Attachment: ${bug.attachmentName}<br>
       Status: ${bug.status}
     `;
