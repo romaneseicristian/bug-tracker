@@ -6,14 +6,22 @@ bugForm.addEventListener('submit', function(e) {
   e.preventDefault();
 
   const title = document.getElementById('title').value;
-  const description = document.getElementById('description').value;
   const severity = document.getElementById('severity').value;
+  const priority = document.getElementById('priority').value;
+  const environment = document.getElementById('environment').value;
+  const description = document.getElementById('description').value;
+  const label = document.getElementById('label').value;
+  const attachment = document.getElementById('attachment').files[0];
 
   const bug = {
     id: Date.now(),
     title,
-    description,
     severity,
+    priority,
+    environment,
+    description,
+    label,
+    attachmentName: attachment ? attachment.name : 'None',
     status: 'Open'
   };
 
@@ -27,8 +35,11 @@ function displayBugs() {
   bugs.forEach(bug => {
     const li = document.createElement('li');
     li.innerHTML = `
-      <strong>${bug.title}</strong> (${bug.severity})<br>
-      ${bug.description}<br>
+      <strong>${bug.title}</strong><br>
+      Severity: ${bug.severity} | Priority: ${bug.priority} | Environment: ${bug.environment}<br>
+      Label: ${bug.label}<br>
+      Description: ${bug.description}<br>
+      Attachment: ${bug.attachmentName}<br>
       Status: ${bug.status}
     `;
     bugList.appendChild(li);
