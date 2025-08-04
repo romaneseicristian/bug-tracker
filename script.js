@@ -1,6 +1,9 @@
 const bugForm = document.getElementById('bugForm');
 const bugList = document.getElementById('bugList');
-let bugs = [];
+
+// Load existing bugs from localStorage
+let bugs = JSON.parse(localStorage.getItem('bugs')) || [];
+displayBugs();
 
 bugForm.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -26,6 +29,7 @@ bugForm.addEventListener('submit', function(e) {
   };
 
   bugs.push(bug);
+  localStorage.setItem('bugs', JSON.stringify(bugs));
   displayBugs();
   bugForm.reset();
 });
