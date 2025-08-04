@@ -96,8 +96,9 @@ button:hover {
 }
 
 .no-numbers {
-  list-styles: none;
+  list-style: none;
   padding-left: 0;
+}
 
 .truncate-text {
   word-wrap: break-word;
@@ -131,7 +132,6 @@ button:hover {
 }
 
 .bug-card {
-  background: red !important;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
