@@ -47,6 +47,7 @@ function displayBugs() {
       <span class="truncate-text">Description: ${bug.description}</span><br>
       Attachment: ${bug.attachmentName}<br>
       Status: ${bug.status}
+      <hr class="bug-devider">
     `;
     bugList.appendChild(li);
   });
