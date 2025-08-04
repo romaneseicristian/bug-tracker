@@ -4,6 +4,7 @@ body {
   padding: 0;
   background: #f4f4f4;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
@@ -61,4 +62,5 @@ input, textarea, select {
 .form-container,
 .bugs-container {
   margin-bottom: 20px; /* adds spacing between sections */
+  flex-direction: column;
 }
