@@ -56,3 +56,9 @@ input, textarea, select {
   padding: 8px;
   box-sizing: border-box;
 }
+
+.header-container,
+.form-container,
+.bugs-container {
+  margin-bottom: 20px; /* adds spacing between sections */
+}
