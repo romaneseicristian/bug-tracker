@@ -74,6 +74,26 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.custom-bug-list {
+  counter-reset: bug-counter;
+  padding-left: 0;
+}
+
+.custom-bug-list li {
+  counter-increment: bug-counter;
+  list-style: none;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.custom-bug-list li::before {
+  content: "Bug #" counter(bug-counter) ". ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
 .truncate-text {
   word-wrap: break-word;
   overflow-wrap: break-word;
