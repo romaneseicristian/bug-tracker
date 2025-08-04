@@ -1,69 +1,72 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 40px;
 }
 
-
-form {
-  background: white;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+.form-container {
   max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form label i {
+  margin-right: 10px;
+  color: #555;
+  font-size: 1.1em;
+  width: 25px;
+  text-align: center;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
-input, textarea, select {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  box-sizing: border-box;
+form textarea {
+  resize: vertical;
+  min-height: 80px;
 }
 
 button {
-  background: #007bff;
+  margin-top: 20px;
+  background-color: #007bff;
   color: white;
+  padding: 12px 20px;
   border: none;
-  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
   cursor: pointer;
-  width: 100%;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-
-ul {
-  list-style: none;
-  padding: 0;
+button:hover {
+  background-color: #0056b3;
 }
 
-label {
-  font-weight: bold;
-  margin-top: 10px;
-  display: block;
-}
-
-input, textarea, select {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-.header-container,
-.form-container,
 .bugs-container {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
