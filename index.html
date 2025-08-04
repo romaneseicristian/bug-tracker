@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiny Bug Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bug Submission</h1>
+  <form id="bugForm">
+    <input type="text" id="title" placeholder="Bug Summary" required>
+    <textarea id="description" placeholder="Bug Description" required></textarea>
+    <select id="severity">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <button type="submit">Submit Bug</button>
+  </form>
 
+  <h2>Submitted Bugs</h2>
+  <ul id="bugList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
