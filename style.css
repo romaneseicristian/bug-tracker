@@ -95,6 +95,10 @@ button:hover {
   font-weight: bold;
 }
 
+.no-numbers {
+  list-styles: none;
+  padding-left: 0;
+
 .truncate-text {
   word-wrap: break-word;
   overflow-wrap: break-word;
