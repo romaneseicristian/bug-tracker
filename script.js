@@ -43,7 +43,7 @@ function displayBugs() {
     li.innerHTML += `
     <div class="bug-card">
       <strong class="truncate-text">${bug.title}</strong><br>
-      <span class="${getSeverityClass(bug.severity)}">Severity: ${bug.severity}</span> | <span class="${getPriorityClass(bug.priority)}">Priority: ${bug.priority}</span> | Environment: ${bug.environment}<br>
+      Severity: <span class="${getSeverityClass(bug.severity)}">${bug.severity}</span> | Priority: <span class="${getPriorityClass(bug.priority)}">${bug.priority}</span> | Environment: ${bug.environment}<br>
       <span class="truncate-text">Label: ${bug.label}</span><br>
       <span class="truncate-text">Description: ${bug.description}</span><br>
       Attachment: ${bug.attachmentName}<br>
