@@ -1,16 +1,19 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  padding: 40px;
+  background-color: #f2f2f2;
+  background-image: radial-gradient(circle at 1px 1px, #ccc 1px, transparent 0);
+  background-size: 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .form-container {
+  background: white;
+  padding: 20px;
+  margin: 40px auto;
   max-width: 600px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 form label {
@@ -63,12 +66,12 @@ button:hover {
 }
 
 .bugs-container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #fff;
+  background: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .truncate-text {
